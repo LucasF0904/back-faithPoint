@@ -1,23 +1,23 @@
 # Backend Faith Point
 Faith Point is a project that aims to allow users to find points of faith, such as churches, spiritual centers, and other places of worship, near their location or in other regions. The application consists of a web and mobile system, with two user interfaces: one for faith points, where they can register their information and events, and another for common users, who can find and connect with these points.
 
-## 📖 architecture
+## 📖 Architecture
 
 * [Backend](docs/architecture/backend.md)
 * [Frontend](docs/architecture/frontend.md)
 * [Database Model](docs/architecture/database-model.md)
 
-## 📃 getting-started
+## 📃 Getting Started
 
 * [Installation](docs/getting-started/installation.md)
 * [Configuration](docs/getting-started/configuration.md)
 
-## 📄 usage
+## 📄 Usage
 
 * [Api Reference](docs/usage/api-reference.md)
 * [Examples](docs/usage/examples.md)
 
-## 💬 contributing
+## 💬 Contributing
 
 * [Code Style](docs/contributing/code-style.md)
 * [Pull Requests](docs/contributing/pull-requests.md)
