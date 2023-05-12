@@ -15,9 +15,9 @@ The `users` table stores information about system users, such as name, email, pa
 | image\_Url     | varchar(255) | Image to use in users          |           |
 | is_admin       | boolean      | Boolean to active admin        |      ✔️    |
 | address_id     | int(11)      | Foreign Key to get Address     |           |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Faith Points
 
@@ -30,15 +30,15 @@ The `faithPoints` table stores information about registered faith points, such a
 | name           | varchar(255) | Faith point's name             |      ✔️    |
 | description    | text         | Faith point's description      |      ✔️    |
 | address_id     | int(11)      | Foreign Key to get Address     |      ✔️    |
-| latitude       | varchar(255) | Latitude from faith point      |      ✔️    |
-| longitude      | varchar(255) | Longitude from faith point     |      ✔️    |
+| latitude       | varchar(255) | Latitude from faith point      |           |
+| longitude      | varchar(255) | Longitude from faith point     |           |
 | religion_id    | int(11)      | Foreign Key to get Religion    |      ✔️    |
 | telephone      | varchar(255) | Telephone from faith point     |           |
 | email          | varchar(255) | Email from faith point         |           |
 | website        | varchar(255) | Website from faith point       |           |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 
 ### Faith Point Images
@@ -49,10 +49,10 @@ The `faithPoints` table stores the images associated with a particular faith poi
 | -------------- | ------------ | ------------------------------ |-----------|
 | id             | int(11)      | Unique image ID                |      ✔️    |
 | faith_point_id | int(11)      | Foreign Key to get Faith Point |      ✔️    |
-| image_url      | varchar(255) | Image URL from faith point     |      ✔️    |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| image_url      | varchar(255) | Image URL from faith point     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Faith Point Services
 
@@ -64,9 +64,9 @@ The `faithPointServices` table stores the services offered by the point of faith
 | faith_point_id | int(11)      | Foreign Key to get Faith Point |      ✔️    |
 | name           | varchar(255) | Service's name                 |      ✔️    |
 | description    | text         | Service's description          |           |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 
 ### Faith Point Schedules
@@ -80,9 +80,9 @@ The `faithPointSchedules` table stores the faith point hours of operation broken
 | day_of_week    | int(11)      | Day of week                    |      ✔️    |
 | open_time      | time         | Open time                      |      ✔️    |
 | close_time     | time         | Close time                     |      ✔️    |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Faith Point Subscriptions
 
@@ -96,9 +96,9 @@ The `faithPointSubscriptions` table stores users' subscriptions to specific fait
 | start_date     | datetime     | Start date                     |      ✔️    |
 | end_date       | datetime     | End date                       |      ✔️    |
 | is_active      | boolean      | Boolean to active subscription |      ✔️    |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Ratings
 
@@ -111,9 +111,9 @@ The `Ratings` table stores users' ratings of Faith Points, with information abou
 | user_id        | int(11)      | Foreign Key to get User        |      ✔️    |
 | score          | int(11)      | Score from rating              |      ✔️    |
 | comment        | text         | Comment from rating            |           |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Religions
 
@@ -124,9 +124,9 @@ The `Religions` table stores the religions of the faith points.
 | id             | int(11)      | Unique religion ID             |      ✔️    |
 | name           | varchar(255) | Religion's name                |      ✔️    |
 | description    | text         | Religion's description         |           |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Country
 
@@ -138,9 +138,9 @@ The `Country` table stores the countries where the faith points are located.
 | short_name     | varchar(255) | Short name from country        |      ✔️    |
 | long_name      | varchar(255) | Longe Name from country        |      ✔️    |
 | code           | varchar(255) | code from country              |           |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### State
 
@@ -153,9 +153,9 @@ The `State` table stores the states where the faith points are located.
 | long_name      | varchar(255) | Longe Name from state          |      ✔️    |
 | code           | varchar(255) | code from state                |           |
 | country_id     | int(11)      | Foreign Key to get Country     |      ✔️    |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### City
 
@@ -168,9 +168,9 @@ The `City` table stores the cities where the faith points are located.
 | long_name      | varchar(255) | Longe Name from city           |      ✔️    |
 | code           | varchar(255) | code from city                 |           |
 | state_id       | int(11)      | Foreign Key to get State       |      ✔️    |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
 ### Address
 
@@ -184,7 +184,7 @@ The `Address` table stores the addresses where the faith points are located.
 | complement     | varchar(255) | Complement from address        |           |
 | neighborhood   | varchar(255) | Neighborhood from address      |           |
 | city_id        | int(11)      | Foreign Key to get City        |      ✔️    |
-| created_at     | datetime     | Foreign Key to get Address     |      ✔️    |
-| updated_at     | datetime     | Foreign Key to get Address     |           |
-| deleted_at     | datetime     | Foreign Key to get Address     |           |
+| created_at     | datetime     | Creation Date                  |      ✔️    |
+| updated_at     | datetime     | If updated                     |           |
+| deleted_at     | datetime     | If Deleted, is a soft Delete   |           |
 
