@@ -61,10 +61,6 @@ Faith Point will be developed using the following technologies:
 * Email: [lucas.faria1@gmail.com](mailto:lucas.faria1@gmail.com)
 * Phone: +55 (31) 9958-1750
 
-### Contributing
-
-To contribute to the project, please fork the repository and submit pull requests with your changes. Bugs and issues can be reported using the project's issue tracker.
-
 ### License
 
 Faith Point is released under the MIT License. See LICENSE file for details.
