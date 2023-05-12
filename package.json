@@ -7,7 +7,24 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-old": "tsnd --inspect --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/shared/http/server.ts ts-node | pino-pretty -c",
+    "dev2": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register src/shared/http/server.ts' -e ts",
+    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/shared/http/server.ts",
+    "start": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/shared/http/server.ts",
+    "lint": "eslint --quiet . --ext .ts",
+    "lint-fix": "eslint --quiet . --ext .ts --fix",
+    "typeorm": "tsnd -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "prettier-check": "prettier -c ./src",
+    "prettier-write": "prettier -w ./src",
+    "eslint-check": "eslint --ext .ts ./src",
+    "fix-code": "prettier -w 'src/*/.ts' && eslint --fix --ext .ts ./src",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "test": "jest --verbose --runInBand",
+    "teste": "jest --passWithNoTests --noStackTrace --runInBand --detectOpenHandles",
+    "seed": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
+    "nodemon": "nodemon",
+    "clear_jest": "jest --clearCache",
+    "seed:generate": "ts-node-dev -r tsconfig-paths/register  src/shared/database/typeorm/seed/generateSeed.ts"
   },
   "author": "",
   "license": "ISC",
