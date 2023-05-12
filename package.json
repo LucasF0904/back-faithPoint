@@ -26,7 +26,7 @@
     "clear_jest": "jest --clearCache",
     "seed:generate": "ts-node-dev -r tsconfig-paths/register  src/shared/database/typeorm/seed/generateSeed.ts"
   },
-  "author": "",
+  "author": "Lucas Davi Ferreira de Faria",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.21.5",
