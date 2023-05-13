@@ -11,7 +11,6 @@ router.get('/', (_request, response) => {
 	const output = ApiResponse.execute('back on');
 	return response.json(output);
 });
-
-// router.use('/auth', route.authRouter);
+router.use('/country', route.countryRouter);
 
 export default router;
