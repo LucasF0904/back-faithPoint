@@ -10,11 +10,17 @@ COPY tsconfig.json ./
 # Copia o codigo fonte para app/src
 COPY src /app/src
 
-# Lista os arquivos
-RUN ls -a
-
+# Instala as dependências
 RUN npm install
+
+# Compila a aplicação
 RUN npm run build
+
+# Instala o TypeORM
+RUN npm install typeorm -g
+
+# Executa as migrations
+CMD npm run typeorm migration:run
 
 EXPOSE 3000
 
