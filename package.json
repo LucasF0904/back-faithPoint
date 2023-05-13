@@ -58,6 +58,8 @@
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
+    "typeorm": "0.2.45",
+    "typeorm-seeding": "1.6.1",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
@@ -99,7 +101,6 @@
     "pretty-error": "^4.0.0",
     "supertest": "^6.3.3",
     "tsyringe": "^4.7.0",
-    "typeorm": "^0.3.16",
     "typeorm-dynamic-filters": "^0.1.1",
     "types": "^0.1.1",
     "uuid": "^9.0.0",

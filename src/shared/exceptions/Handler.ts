@@ -24,11 +24,11 @@ class Handler extends Error {
 
 	public traceId: string;
 
-	public created_at: string;
+	public created_at: Date;
 
-	public updated_at: string;
+	public updated_at: Date;
 
-	public deleted_at: string;
+	public deleted_at: Date;
 
 	constructor(message: string, code: string, statusCode = http.BAD_REQUEST, type = 'Exception') {
 		super();
