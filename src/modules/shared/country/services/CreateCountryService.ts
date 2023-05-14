@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { inject, injectable } from 'tsyringe';
-import ICountry from '@modules/shared/country/domain/interfaces/ICountry';
 import ICountryRepository from '@modules/shared/country/domain/repositories/ICountryRepository';
 import IRequestCreateCountry from '../domain/interfaces/IRequestCreateCountry';
+import { ICountry } from '../domain/interfaces/ICountry';
 
 @injectable()
 class CreateCountryService {

@@ -1,4 +1,4 @@
-import ICountry from '@modules/shared/country/domain/interfaces/ICountry';
+import { ICountry } from '@modules/shared/country/domain/interfaces/ICountry';
 import shortName from '@shared/util/ShortName';
 
 import {

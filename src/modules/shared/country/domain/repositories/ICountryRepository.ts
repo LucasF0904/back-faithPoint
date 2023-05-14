@@ -1,8 +1,8 @@
-import ICountry from '@modules/shared/country/domain/interfaces/ICountry';
 import Country from '@modules/shared/country/infra/typeorm/entities/Country';
 import ICreateCountry from '../interfaces/ICreateCountry';
 import IUpdateCountry from '../interfaces/IUpdateCountry';
 import shortName from '@shared/util/ShortName';
+import { ICountry } from '../interfaces/ICountry';
 
   
 interface ICountryRepository {

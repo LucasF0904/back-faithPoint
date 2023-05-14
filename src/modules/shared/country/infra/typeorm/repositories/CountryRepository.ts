@@ -2,9 +2,9 @@ import ICountryRepository from '@modules/shared/country/domain/repositories/ICou
 import shortName from '@shared/util/ShortName';
 import { getRepository, Repository } from 'typeorm';
 import Country from '@modules/shared/country/infra/typeorm/entities/Country';
-import ICountry from '@modules/shared/country/domain/interfaces/ICountry';
 import ICreateCountry from '@modules/shared/country/domain/interfaces/ICreateCountry';
 import IUpdateCountry from '@modules/shared/country/domain/interfaces/IUpdateCountry';
+import { ICountry } from '@modules/shared/country/domain/interfaces/ICountry';
 
 class CountryRepository implements ICountryRepository {
   private ormRepository: Repository<Country>;
