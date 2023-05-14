@@ -7,7 +7,7 @@ import 'es6-shim';
 import '@shared/database';
 
 import { isCelebrateError } from 'celebrate';
-import express, { NextFunction, Request, Response } from 'express';
+import express, { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
 import http from '@config/http';
@@ -17,6 +17,8 @@ import Dictionary from '@shared/exceptions/dictionary/request';
 import Handler from '@shared/exceptions/Handler';
 import ShowPrettyError from '@shared/exceptions/ShowPrettyError';
 import ErrorResponse from '@shared/http/response/ErrorResponse';
+import CreateLogExceptionService from '@modules/shared/logException/services/CreateLogExceptionService';
+
 
 import setupRoutes from './routes';
 
@@ -30,7 +32,7 @@ app.use(setupRoutes);
 
 CreateConnection.execute();
 
-app.use(async (error: Handler, _request: Request, response: Response, _next: NextFunction) => {
+app.use(async (error: Handler, request: Request, response: Response) => {
 	logger.info('Entrou no use - App.ts');
 
 	let handler = error;
@@ -58,11 +60,11 @@ app.use(async (error: Handler, _request: Request, response: Response, _next: Nex
 
 	logger.info('Criando Container no CreateLogExpetionService no Celebrate - App.ts');
 
-	// const createLogExceptionService = container.resolve(CreateLogExceptionService);
+	const createLogExceptionService = container.resolve(CreateLogExceptionService);
 
 	logger.info('Executando o createLogExeptionService.execute - App.ts');
 
-	// createLogExceptionService.execute(handler, request);
+	createLogExceptionService.execute(handler, request);
 
 	logger.info('Retornoando o statusCode  - App.ts');
 

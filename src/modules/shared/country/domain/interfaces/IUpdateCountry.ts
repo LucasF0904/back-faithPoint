@@ -1,4 +1,4 @@
-import { shortName } from './ICountry';
+import shortName from '@shared/util/ShortName';
 
 interface IUpdateCountry {
   id?: string;

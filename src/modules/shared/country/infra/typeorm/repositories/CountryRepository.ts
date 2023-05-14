@@ -1,5 +1,5 @@
 import ICountryRepository from '@modules/shared/country/domain/repositories/ICountryRepository';
-import { shortName } from '@modules/shared/country/domain/interfaces/ICountry';
+import shortName from '@shared/util/ShortName';
 import { getRepository, Repository } from 'typeorm';
 import Country from '@modules/shared/country/infra/typeorm/entities/Country';
 import ICountry from '@modules/shared/country/domain/interfaces/ICountry';

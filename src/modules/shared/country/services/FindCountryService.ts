@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { inject, injectable } from 'tsyringe';
 import ICountryRepository from '@modules/shared/country/domain/repositories/ICountryRepository';
-import ICountry, { shortName } from '@modules/shared/country/domain/interfaces/ICountry';
+import ICountry from '@modules/shared/country/domain/interfaces/ICountry';
+import shortName from '@shared/util/ShortName';
 
 @injectable()
 class FindCountryService {

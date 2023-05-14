@@ -1,12 +1,11 @@
-import {
-    ICountry,
-    shortName,
-  } from '@modules/shared/country/domain/interfaces/ICountry';
-  import Country from '@modules/shared/country/infra/typeorm/entities/Country';
-  import ICreateCountry from '../interfaces/ICreateCountry';
-  import IUpdateCountry from '../interfaces/IUpdateCountry';
+import ICountry from '@modules/shared/country/domain/interfaces/ICountry';
+import Country from '@modules/shared/country/infra/typeorm/entities/Country';
+import ICreateCountry from '../interfaces/ICreateCountry';
+import IUpdateCountry from '../interfaces/IUpdateCountry';
+import shortName from '@shared/util/ShortName';
+
   
-  interface ICountryRepository {
+interface ICountryRepository {
     create(data: ICreateCountry): Promise<Country>;
     update(id: string, country: IUpdateCountry): Promise<boolean>;
     delete(id: string): Promise<void>;
