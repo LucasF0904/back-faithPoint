@@ -27,8 +27,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          npm install --save-dev @babel/cli @babel/core @babel/preset-env @babel/preset-typescript
-          npx babel src --extensions \".js,.ts\" --out-dir dist --copy-files
+          docker build -t faith-point .
 
       - name: Copy Docker image to server
         uses: appleboy/scp-action@master
