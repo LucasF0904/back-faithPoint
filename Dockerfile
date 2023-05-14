@@ -11,7 +11,7 @@ COPY tsconfig.json ./
 COPY src /app/src
 
 # Instala as dependências
-RUN npm install
+RUN npm install --force
 
 # Compila a aplicação
 RUN npm run build
