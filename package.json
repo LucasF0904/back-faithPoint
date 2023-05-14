@@ -18,7 +18,7 @@
     "prettier-write": "prettier -w ./src",
     "eslint-check": "eslint --ext .ts ./src",
     "fix-code": "prettier -w 'src/*/.ts' && eslint --fix --ext .ts ./src",
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --ignore '**/*.spec.ts' --ignore '**/*.test.ts'",
     "test": "jest --verbose --runInBand",
     "teste": "jest --passWithNoTests --noStackTrace --runInBand --detectOpenHandles",
     "seed": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
