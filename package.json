@@ -63,6 +63,7 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-flow": "^7.21.4",
     "@joi/date": "^2.1.0",
     "@meanie/mongoose-to-json": "^2.6.0",
     "@types/axios": "^0.14.0",
