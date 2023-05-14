@@ -1,6 +1,6 @@
 import shortName from '@shared/util/ShortName';
 
-export interface ICountry {
+interface ICountry {
 	id: string;
 	short_name?: shortName;
 	long_name?: string;
