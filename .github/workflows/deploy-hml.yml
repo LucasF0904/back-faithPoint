@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t faithPoint .
+          docker build -t faith-point .
 
       - name: Copy Docker image to server
         uses: appleboy/scp-action@master
