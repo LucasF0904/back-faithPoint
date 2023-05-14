@@ -5,7 +5,7 @@ import options from '@config/cors';
 import route from './importRoutes';
 
 const router = Router();
-router.use(cors(options));
+router.use(cors(options.cors));
 
 router.get('/', (_request, response) => {
 	const output = ApiResponse.execute('back on');

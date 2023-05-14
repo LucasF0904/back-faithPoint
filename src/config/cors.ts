@@ -1,10 +1,9 @@
-/* eslint-disable no-useless-escape */
-import cors from 'cors';
-
-const allowedOrigins = [/\.dev\.faithpoint\.us$/, /\.homolocagacao\.faithpoint\.us$/, /\.faithpoint\.us$/];
-
-const options: cors.CorsOptions = {
-	origin: allowedOrigins
+const options = { 
+	cors: {
+		origin: '*',
+		methods: ['GET', 'POST', 'PUT', 'DELETE'],
+		allowedHeaders: ['Content-Type', 'Authorization'],
+	},
 };
 
 export default options;
