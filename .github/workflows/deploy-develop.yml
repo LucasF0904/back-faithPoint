@@ -1,4 +1,4 @@
-name: Deploy Dev
+name: Build and Deploy Dev
 
 on:
   push:
@@ -6,14 +6,14 @@ on:
       - develop
 
 jobs:
-  build-and-deploy:
+  build-and-deploy-dev:
     runs-on: ubuntu-latest
-    env:
-      ENVIRONMENT: development
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Aqui vão as etapas específicas do ambiente de desenvolvimento
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t faith-point .
+          docker-compose -f docker-compose.dev.yml build
 
       - name: Copy Docker image to server
         uses: appleboy/scp-action@master
@@ -46,5 +46,5 @@ jobs:
           key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           script: |
             cd /path/to/app
-            docker-compose down
-            docker-compose up -d
+            docker-compose -f docker-compose.dev.yml down
+            docker-compose -f docker-compose.dev.yml up -d
