@@ -33,8 +33,8 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.AWS_PUBLIC_IP }}
-          username: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          username: ${{ secrets.AWS_USERNAME}}
+          key: ${{ secrets.AWS_SSH_KEY }}
           source: .
           target: /path/to/app
 
@@ -42,8 +42,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.AWS_PUBLIC_IP }}
-          username: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_SSH_KEY }}
           script: |
             cd /path/to/app
             docker-compose -f docker-compose.prod.yml down
