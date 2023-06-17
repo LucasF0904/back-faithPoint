@@ -14,6 +14,7 @@ interface IStateRepository {
     findByCountry(country: string): Promise<IState[] | undefined>;
     findByShortName(shortName: shortName): Promise<IState | undefined>;
     findByLongName(longName: string): Promise<IState | undefined>;
+    findByCode(code: string): Promise<IState[] | undefined>;
   }
   
   export default IStateRepository;

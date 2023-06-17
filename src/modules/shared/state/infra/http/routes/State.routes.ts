@@ -13,6 +13,7 @@ routes.get('/:id', stateController.findById);
 routes.get('/findByCountry', stateController.findByCountry);
 routes.get('/findByShortName', stateController.findByShortName);
 routes.get('/findByLongName', stateController.findByLongName);
+routes.get('/findByCode', stateController.findByCode);
 
 export default routes;
 

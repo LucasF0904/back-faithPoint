@@ -17,6 +17,7 @@ class CreateStateService {
             country: parameters.country,
             short_name: parameters.short_name,
             long_name: parameters.long_name,
+            code: parameters.code,
             created_at: parameters.created_at,
         });
         return state;

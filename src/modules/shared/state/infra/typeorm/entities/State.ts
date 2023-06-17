@@ -27,6 +27,9 @@ class State implements IState {
 
 	@Column()
 	long_Name: string;	
+
+	@Column()
+	code: string;
 	
 	@ManyToOne(() => Country)
 	@JoinColumn({ name: 'country_id' })

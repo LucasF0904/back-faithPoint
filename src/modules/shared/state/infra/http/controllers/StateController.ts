@@ -59,7 +59,7 @@ class StateController {
 
 		const state = await service.findByCountry(request.params.id);
 
-		const output = await ApiResponse.execute('findById retornado', state);
+		const output = await ApiResponse.execute('findByCountry retornado', state);
 
 		return response.json(output);
 	}
@@ -78,6 +78,16 @@ class StateController {
 		const state = await service.findByLongName(request.body);
 
 		const output = await ApiResponse.execute('findByLongName retornado', state);
+
+		return response.json(output);
+	}
+
+	public async findByCode(request: Request, response: Response): Promise<Response> {
+		const service = container.resolve(FindStateService);
+
+		const state = await service.findByCode(request.params.id);
+
+		const output = await ApiResponse.execute('findByCode retornado', state);
 
 		return response.json(output);
 	}

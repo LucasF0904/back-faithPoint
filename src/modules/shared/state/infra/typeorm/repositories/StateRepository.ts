@@ -21,6 +21,7 @@ class StateRepository implements IStateRepository {
     const state = this.ormRepository.create({
       short_Name: parameters.short_name,
       long_Name: parameters.long_name,
+      code: parameters.code,
       country: parameters.country,
       created_at: parameters.created_at,
     });
@@ -83,6 +84,16 @@ class StateRepository implements IStateRepository {
     const state = this.ormRepository.findOne({
       where: {
         long_Name: longName,
+      },
+    });
+
+    return state;
+  }
+
+  public async findByCode(code: string): Promise<IState[] | undefined> {
+    const state = this.ormRepository.find({
+      where: {
+        code: code,
       },
     });
 

@@ -1,7 +1,7 @@
 import {MigrationInterface, QueryRunner, Table, TableIndex} from 'typeorm';
 import { IDX_STATE_COUNTRY_ID, IDX_STATE_ID, STATE } from "./options/TableState";
 
-export class CreateState1686979398073 implements MigrationInterface {
+export class CreateState1686982777878 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         // @ts-ignore state

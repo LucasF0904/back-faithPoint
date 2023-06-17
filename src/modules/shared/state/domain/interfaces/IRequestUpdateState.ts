@@ -5,6 +5,7 @@ interface IRequestUpdateState {
   id?: string;
   short_name?: shortName;
 	long_name?: string;
+	code?: string;
 	country?: ICountry;
 	updated_at?: Date;
 }

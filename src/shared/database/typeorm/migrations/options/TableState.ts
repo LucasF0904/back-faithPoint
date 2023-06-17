@@ -50,6 +50,11 @@ export const STATE = {
             isNullable: false,
         },
         {
+            name: 'code',
+            type: 'varchar',
+            isNullable: true,
+        },
+        {
             name: 'country_id',
             type: 'uuid',
             isNullable: false,

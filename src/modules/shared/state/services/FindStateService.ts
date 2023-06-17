@@ -31,6 +31,12 @@ class FindStateService {
         return state;
     }
 
+    public async findByCode(code: string): Promise<IState[] | undefined> {
+        const state = await this.stateRepository.findByCode(code);
+
+        return state;
+    }
+
     public async findByShortName(shortName: shortName): Promise<IState | undefined> {
         const state = await this.stateRepository.findByShortName(shortName);
 

@@ -24,10 +24,14 @@ class UpdateCountryService {
 
     if (typeof paramters.short_name !== 'undefined') {
       Object.assign(data, { shortName: paramters.short_name });
-    }
+    }    
 
     if (typeof paramters.long_name !== 'undefined') {
       Object.assign(data, { long_name: paramters.long_name });
+    }
+
+    if (typeof paramters.code !== 'undefined') {
+      Object.assign(data, { code: paramters.code });
     }
 
     if (typeof paramters.updated_at !== 'undefined') {
