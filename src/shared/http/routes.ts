@@ -12,5 +12,6 @@ router.get('/', (_request, response) => {
 	return response.json(output);
 });
 router.use('/country', route.countryRouter);
+router.use('/state', route.stateRouter);
 
 export default router;
