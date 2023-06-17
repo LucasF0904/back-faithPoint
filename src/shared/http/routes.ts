@@ -13,5 +13,7 @@ router.get('/', (_request, response) => {
 });
 router.use('/country', route.countryRouter);
 router.use('/state', route.stateRouter);
+router.use('/city', route.cityRouter);
+router.use('/address', route.addressRouter);
 
 export default router;
