@@ -1,5 +1,5 @@
 import { container } from 'tsyringe';
-import CityRepository from '@modules/shared/city/infra/typeorm/repositories/CityRepository';
-import ICityRepository from '@modules/shared/city/domain/repositories/ICityRepository';
+import AddressRepository from '@modules/shared/address/infra/typeorm/repositories/AddressRepository';
+import IAddressRepository from '@modules/shared/address/domain/repositories/IAddressRepository';
 
-container.registerSingleton<ICityRepository>('CityRepository', CityRepository);
+container.registerSingleton<IAddressRepository>('AddressRepository', AddressRepository);
