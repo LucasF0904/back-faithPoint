@@ -63,3 +63,20 @@ To install the backend, follow these steps:
 7. Run `npm run start`
 
 The API should now be running at [http://localhost:8080](http://localhost:8080/).
+
+#### To Create a new Table or module in project is:
+### Initialize by:
+
+1. create in src/shared/database/typeorm/migrations/options `Table<nameTable>.ts`
+2 Run Migration with the name `Create<nameTable>.ts`
+
+### To create a new migration
+
+1. Run `yarn typeorm migration:create -n <migration name>`
+2. Write the migration in the generated file
+3. Run `yarn typeorm migration:run`
+
+if you want to revert the migration, run `yarn typeorm migration:revert`
+
+
+### After create module in src/modules with table name
