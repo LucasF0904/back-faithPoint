@@ -4,6 +4,7 @@ import stateRouter from '@modules/shared/state/infra/http/routes/State.routes';
 import cityRouter from '@modules/shared/city/infra/http/routes/City.routes';
 import addressRouter from '@modules/shared/address/infra/http/routes/Address.routes';
 import religionRouter from '@modules/religion/infra/http/routes/Religion.routes';
+import faithRouter from '@modules/faith_point/infra/http/routes/FaithPoint.routes';
 
 const route = {
     countryRouter,
@@ -11,6 +12,7 @@ const route = {
     cityRouter,
     addressRouter,
     religionRouter,
+    faithRouter,
 };
 
 export default route;
