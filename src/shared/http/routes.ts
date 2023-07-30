@@ -17,5 +17,6 @@ router.use('/city', route.cityRouter);
 router.use('/address', route.addressRouter);
 router.use('/religion', route.religionRouter);
 router.use('/faithPoint', route.faithRouter);
+router.use('/rating', route.ratingRouter);
 
 export default router;
