@@ -8,11 +8,11 @@ class CreateFaithPointService {
     constructor(
         // @ts-ignore
         @inject('FaithPointRepository')
-        private religionRepository: IFaithPointRepository,
+        private faithPointRepository: IFaithPointRepository,
     ){}
 
     public async create(parameters: ICreateFaithPoint): Promise<ICreateFaithPoint> {
-        const religion = await this.religionRepository.create({
+        const faithPoint = await this.faithPointRepository.create({
             name: parameters.name,
             description: parameters.description,
             address: parameters.address,
@@ -24,7 +24,7 @@ class CreateFaithPointService {
             website: parameters.website,
             created_at: parameters.created_at,
         });
-        return religion;
+        return faithPoint;
     }
 }
 
