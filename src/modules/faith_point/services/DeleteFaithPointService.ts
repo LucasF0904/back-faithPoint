@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { inject, injectable } from 'tsyringe';
-import IReligionRepository from '../domain/repositories/IFaithPointRepository';
+import IFaithPointRepository from '../domain/repositories/IFaithPointRepository';
 
 @injectable()
-class DeleteReligionService {
+class DeleteFaithPointService {
     constructor(
         //@ts-ignore
-        @inject('ReligionRepository')
-        private religionRepository: IReligionRepository,
+        @inject('FaithPointRepository')
+        private faithPointRepository: IFaithPointRepository,
     ) {}
 
     public async delete(id: string): Promise<void> {
-        await this.religionRepository.delete(id);
+        await this.faithPointRepository.delete(id);
     }
 }
 
-export default DeleteReligionService;
+export default DeleteFaithPointService;

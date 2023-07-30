@@ -1,33 +1,33 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { inject, injectable } from 'tsyringe';
-import IReligionRepository from '../domain/repositories/IFaithPointRepository';
-import { IReligion } from '../domain/interfaces/IFaithPoint';
+import IFaithPointRepository from '../domain/repositories/IFaithPointRepository';
+import { IFaithPoint } from '../domain/interfaces/IFaithPoint';
 
 @injectable()
-class FindReligionService {    
+class FindFaithPointService {    
     constructor(
         //@ts-ignore
-        @inject('ReligionRepository')
-        private religionRepository: IReligionRepository,
+        @inject('FaithPointRepository')
+        private faithPointRepository: IFaithPointRepository,
     ) {}
 
-    public async findAll(): Promise<IReligion[] | undefined> {
-        const religion = await this.religionRepository.findAll();
+    public async findAll(): Promise<IFaithPoint[] | undefined> {
+        const faithPoint = await this.faithPointRepository.findAll();
 
-        return religion;
+        return faithPoint;
     }
 
-    public async findById(id: string): Promise<IReligion | undefined> {
-        const religion = await this.religionRepository.findById(id);
+    public async findById(id: string): Promise<IFaithPoint | undefined> {
+        const faithPoint = await this.faithPointRepository.findById(id);
 
-        return religion;
+        return faithPoint;
     }
 
-    public async findByName(name: string): Promise<IReligion | undefined> {
-        const religion = await this.religionRepository.findByName(name);
+    public async findByName(name: string): Promise<IFaithPoint | undefined> {
+        const faithPoint = await this.faithPointRepository.findByName(name);
 
-        return religion;
+        return faithPoint;
     }
         
 }
-export default FindReligionService;
+export default FindFaithPointService;

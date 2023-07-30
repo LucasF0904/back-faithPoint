@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { inject, injectable } from 'tsyringe';
-import IReligionRepository from '../domain/repositories/IFaithPointRepository';
-import IRequestUpdateReligion from '../domain/interfaces/IRequestUpdateFaithPoint';
+import IFaithPointRepository from '../domain/repositories/IFaithPointRepository';
+import IRequestUpdateFaithPoint from '../domain/interfaces/IRequestUpdateFaithPoint';
 
 @injectable()
-class UpdateReligionService {
+class UpdateFaithPointService {
     constructor(
         //@ts-ignore
-        @inject('ReligionRepository')
-        private religionRepository: IReligionRepository,
+        @inject('FaithPointRepository')
+        private faithPointRepository: IFaithPointRepository,
     ) {}
 
-    public async update(id: string, parameters: IRequestUpdateReligion): Promise<IRequestUpdateReligion> {
+    public async update(id: string, parameters: IRequestUpdateFaithPoint): Promise<IRequestUpdateFaithPoint> {
         const data = {};
 
         if (typeof parameters.name !== 'undefined') {
@@ -34,8 +34,8 @@ class UpdateReligionService {
             Object.assign(data, { longitude: parameters.longitude });
         }
 
-        if (typeof parameters.religion !== 'undefined') {
-            Object.assign(data, { religion: parameters.religion });
+        if (typeof parameters.faithPoint !== 'undefined') {
+            Object.assign(data, { faithPoint: parameters.faithPoint });
         }
 
         if (typeof parameters.telephone !== 'undefined') {
@@ -58,10 +58,10 @@ class UpdateReligionService {
             throw new Error('No data to update');
         }
 
-        await this.religionRepository.update(id, data);
+        await this.faithPointRepository.update(id, data);
 
         return parameters;
     }
 }
 
-export default UpdateReligionService;
+export default UpdateFaithPointService;
